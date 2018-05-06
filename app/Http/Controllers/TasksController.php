@@ -21,10 +21,10 @@ class TasksController extends Controller
         $tasks = [];
         if (\Auth::check()) {
             $user = \Auth::user();
-            $tasklists = $user->tasklists()->orderBy('created_at', 'desc')->paginate(10);
+            $tasks = $user->tasklists()->orderBy('created_at', 'desc')->paginate(10);
         }
         return view('tasks.index', [
-            'tasks' => $tasklists,
+            'tasks' => $tasks,
         ]);
     }
 

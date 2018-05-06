@@ -7,12 +7,6 @@
         {{ $user->name }}
 
     <h1>タスク一覧</h1>
-        <div class="center jumbotron">
-        <div class="text-center">
-            <h1>Welcome to the Tasks</h1>
-        </div>
-    </div>
-
     @if (count($tasks) > 0)
         <table class="table table-striped">
             <thead>
@@ -39,8 +33,8 @@
     @else
         <div class="center jumbotron">
             <div class="text-center">
-                <h1>Welcome to the Tasks</h1>
-                {!! link_to_route('signup.get', 'Sign up now!', null, ['class' => 'btn btn-lg btn-primary']) !!}
+                <h1>タスクリストにようこそ</h1>
+                {!! link_to_route('signup.get', 'サインアップ', null, ['class' => 'btn btn-lg btn-primary']) !!}
             </div>
         </div>
 
